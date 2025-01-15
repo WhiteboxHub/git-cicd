@@ -15,7 +15,7 @@ export default function Schedule() {
 
   const renderComponent = () => {
     switch (activeComponent) {
-      case "calendar":
+      // case "calendar":
         // return <Calendar />;
       case "courseContent":
         return <CourseContent />;
@@ -38,7 +38,7 @@ export default function Schedule() {
 
         <section className="mb-8 flex flex-col sm:flex-row sm:justify-between">
           <div className="flex flex-row justify-center gap-5 sm:w-1/6 sm:flex-col sm:justify-start sm:gap-0">
-            <button
+            {/* <button
               className={`mb-2 w-2/5 rounded-md px-4 py-2 text-sm font-bold text-black hover:bg-gradient-to-tl hover:from-primary hover:to-blue-300 sm:w-full sm:text-base lg:text-lg ${
                 activeComponent === "calendar"
                   ? "bg-gradient-to-br from-primary to-blue-400 text-white border-2 border-blue-600 shadow-lg"
@@ -47,7 +47,7 @@ export default function Schedule() {
               onClick={() => handleButtonClick("calendar")}
             >
               Calendar
-            </button>
+            </button> */}
             <button
               className={`mb-2 w-2/5 rounded-md px-3 py-2 text-sm font-bold text-black hover:bg-gradient-to-tl hover:from-primary hover:to-blue-300 sm:w-full sm:text-base lg:text-lg ${
                 activeComponent === "courseContent"

@@ -276,10 +276,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import ThemeToggler from "./ThemeToggler";
+// import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
-import WBLlight from "@/public/images/wbl-light.png"; // Replace with the actual path
-import WBLdark from "@/public/images/wbl-dark.png"; // Replace with the actual path
+// import WBLlight from "@/public/images/wbl-light.png"; // Replace with the actual path
+// import WBLdark from "@/public/images/wbl-dark.png"; // Replace with the actual path
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/utils/AuthContext";
 
@@ -349,7 +349,7 @@ const Header = () => {
                   sticky ? "py-3 lg:py-1" : "py-0"
                 }`}
               >
-                <Image
+                {/* <Image
                   src={WBLdark}
                   alt="logo"
                   width={50}
@@ -362,7 +362,7 @@ const Header = () => {
                   width={50}
                   height={50}
                   className="hidden dark:block"
-                />
+                /> */}
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
@@ -447,7 +447,7 @@ const Header = () => {
                     {isAuthenticated ? (
                       <div>
                         <li className="lg:hidden">
-                          <button
+                          {/* <button
                             className="my-3 block w-full rounded-3xl bg-gradient-to-tl from-indigo-900 to-purple-400 py-2 px-3 text-center text-sm font-bold text-white hover:bg-gradient-to-br hover:from-indigo-900 hover:to-purple-400 sm:text-base"
                             onClick={(e) => {
                               closeNavbar();
@@ -455,11 +455,11 @@ const Header = () => {
                             }}
                           >
                             My Profile
-                          </button>
+                          </button> */}
                         </li>
                         <li className="lg:hidden">
                           <button
-                            className="my-3 block w-full rounded-3xl bg-gradient-to-tl from-indigo-900 to-purple-400 py-2 px-3 text-center text-sm font-bold text-white hover:bg-gradient-to-br hover:from-indigo-900 hover:to-purple-400 sm:text-base"
+                            className="my-3 block w-full rounded-3xl bg-gradient-to-tl from-indigo-900 to-blue-400 py-2 px-3 text-center text-sm font-bold text-white hover:bg-gradient-to-br hover:from-indigo-900 hover:to-blue-400 sm:text-base"
                             onClick={(e) => {
                               closeNavbar();
                               handleLogout();
@@ -474,20 +474,20 @@ const Header = () => {
                         <li className="lg:hidden">
                           <Link
                             href="/login"
-                            className="my-3 block rounded-3xl bg-gradient-to-tl from-indigo-900 to-purple-400 py-2 px-3 text-center text-sm font-bold text-white hover:bg-gradient-to-br hover:from-indigo-900 hover:to-purple-400 sm:text-base"
+                            className="my-3 block rounded-3xl bg-gradient-to-tl from-indigo-900 to-purple-400 py-2 px-3 text-center text-sm font-bold text-white hover:bg-gradient-to-br hover:from-indigo-900 hover:to-blue-400 sm:text-base"
                             onClick={closeNavbar}
                           >
                             Login
                           </Link>
                         </li>
                         <li className="lg:hidden">
-                          <Link
+                          {/* <Link
                             href="/signup"
                             className="block rounded-3xl bg-gradient-to-tl from-indigo-900 to-purple-400 py-2 px-3 text-center text-sm font-bold text-white hover:bg-gradient-to-br hover:from-indigo-900 hover:to-purple-400 sm:text-base"
                             onClick={closeNavbar}
                           >
                             Register
-                          </Link>
+                          </Link> */}
                         </li>
                       </>
                     )}
@@ -497,15 +497,15 @@ const Header = () => {
               <div className="hidden items-center justify-end pr-16 lg:flex lg:pr-0">
                 {isAuthenticated ? (
                   <div className="flex gap-4">
-                    <button
+                    {/* <button
                       onClick={display_user_dashboard}
                       className="rounded-md bg-gradient-to-br from-indigo-900 to-purple-400 py-1 px-4 text-sm font-bold text-white transition duration-500 hover:bg-opacity-90 lg:text-base"
                     >
                       My Profile
-                    </button>
+                    </button> */}
                     <button
                       onClick={handleLogout}
-                      className="rounded-md bg-gradient-to-br from-indigo-900 to-purple-400 py-3 px-6 text-sm font-bold text-white transition duration-500 hover:bg-opacity-90 lg:text-base"
+                      className="rounded-md bg-gradient-to-br from-indigo-900 to-blue-400 py-3 px-6 text-sm font-bold text-white transition duration-500 hover:bg-opacity-90 lg:text-base"
                     >
                       Logout
                     </button>
@@ -514,24 +514,24 @@ const Header = () => {
                   <>
                     <Link
                       href="/login"
-                      className="hover:shadow-signUp mr-3 rounded-md bg-gradient-to-br from-indigo-900 to-purple-400 py-3 px-8 text-base font-bold text-white duration-500 hover:bg-opacity-90 hover:bg-gradient-to-tl hover:from-indigo-900 hover:to-purple-400 md:block md:px-9 lg:px-6 xl:px-7"
+                      className="hover:shadow-signUp mr-3 rounded-md bg-gradient-to-br from-indigo-900 to-blue-400 py-3 px-8 text-base font-bold text-white duration-500 hover:bg-opacity-90 hover:bg-gradient-to-tl hover:from-indigo-900 hover:to-blue-400 md:block md:px-9 lg:px-6 xl:px-7"
                     >
                       Login
                     </Link>
-                    <Link
+                    {/* <Link
                       href="/signup"
                       className="hover:shadow-signUp rounded-md bg-gradient-to-br from-indigo-900 to-purple-400 py-3 px-8 text-base font-bold text-white duration-500 hover:bg-opacity-90 hover:bg-gradient-to-tl hover:from-indigo-900 hover:to-purple-400 md:block md:px-9 lg:px-6 xl:px-7"
                     >
                       Register
-                    </Link>
+                    </Link> */}
                   </>
                 )}
-                <div className="items-center justify-end pr-16 lg:flex lg:pr-0">
+                {/* <div className="items-center justify-end pr-16 lg:flex lg:pr-0">
                   <ThemeToggler />
-                </div>
-              </div>
+                </div> */}
+              {/* </div>
               <div className="block items-center justify-end pr-16 lg:hidden lg:pr-0">
-                <ThemeToggler />
+                <ThemeToggler /> */}
               </div>
             </div>
           </div>
