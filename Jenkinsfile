@@ -21,7 +21,7 @@ pipeline {
                 branch: 'main'
             }
         }
-        // stage for docker 
+        // stage for docker
 
         stage('Build Docker') {
             steps {
@@ -37,7 +37,7 @@ pipeline {
         stage('Push the artifacts') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: "${e6a63844-f676-4413-817e-a55a957ebff1}", passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
+                    withCredentials([usernamePassword(credentialsId: "${e6a63844-f676-4413-817e-a55a957ebff1}", passwordVariable:Password5*, usernameVariable:REMOTE IP)]) {
                         sh '''
                         echo 'Push to Repo'
                         echo ${DOCKER_PASSWORD} | docker login -u ${DOCKER_USERNAME} --password-stdin
