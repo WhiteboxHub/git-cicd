@@ -1,10 +1,4 @@
-# Whitebox Learning
-
-This repository contains the code for client of the Whitebox Learning.
-
-## Live Demo
-
-You can check out the live demo of this project [here](https://whiteboxhub.github.io/whiteboxLearning-wbl/).
+## Git - CICD
 
 ## Installation and Usage
 
@@ -21,13 +15,13 @@ Before getting started, ensure you have the following installed on your system:
 # Clone the repository
 
 ```
-git clone https://github.com/WhiteboxHub/whiteboxLearning-wbl.git
+git clone https://github.com/WhiteboxHub/git-cicd.git
 ```
 
 Navigate to the client directory
 
 ```bash
-cd whiteboxLearning-wbl
+cd UI
 ```
 
 # Install the dependencies
