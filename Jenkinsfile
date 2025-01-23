@@ -9,7 +9,7 @@ pipeline {
 
     environment {
         ImageTag = "${params.IMAGE_TAG}"
-        DOCKER_CREDENTIALS_ID = "${params.DOCKER_CREDENTIALS_ID}"
+        DOCKER_CREDENTIALS_ID = "${params.DOCKER_CREDENTIALS_ID}"xs
         AWS_CREDENTIALS_ID = "${params.AWS_CREDENTIALS_ID}"
     }
 
@@ -54,7 +54,7 @@ pipeline {
                     withCredentials([string(credentialsId: "${AWS_CREDENTIALS_ID}", variable: 'AWS_ACCESS_KEY_ID')]) {
                         sh '''
                         echo 'Deploying to EC2'
-                        ssh -i /path/to/your/key.pem ec2-user@your-ec2-instance "docker pull remote123/whiteboxlearning:${ImageTag} && docker run -d -p 80:80 remote123/whiteboxlearning:${ImageTag}"
+                        ssh -i Git-CICD.pem ec2-user@ip-172-31-12-97 "docker pull remote123/whiteboxlearning:${ImageTag} && docker run -d -p 80:80 remote123/whiteboxlearning:${ImageTag}"
                         '''
                     }
                 }
