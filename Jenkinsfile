@@ -37,7 +37,7 @@ pipeline {
         stage('Push the artifacts') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: "${e6a63844-f676-4413-817e-a55a957ebff1}", passwordVariable:Password5*, usernameVariable:REMOTE IP)]) {
+                    withCredentials([usernamePassword(credentialsId: "${DOCKER_CREDENTIALS_ID}", passwordVariable:docker-hub-credentials, usernameVariable:REMOTE IP)]) {
                         sh '''
                         echo 'Push to Repo'
                         echo ${DOCKER_PASSWORD} | docker login -u ${DOCKER_USERNAME} --password-stdin
