@@ -74,7 +74,7 @@ pipeline {
 
     parameters {
         string(name: 'IMAGE_TAG', defaultValue: 'latest', description: 'Tag for Docker image')
-        string(name: 'DOCKER_CREDENTIALS_ID', defaultValue: 'docker-hub-credentials', description: 'Docker Hub credentials ID')
+        string(name: 'DOCKER_CREDENTIALS_ID', defaultValue: '1bf87432-df97-4e74-80ab-eebc60c6e630', description: 'Docker Hub credentials ID')
         string(name: 'AWS_CREDENTIALS_ID', defaultValue: 'aws-credentials', description: 'AWS credentials ID')
     }
 
