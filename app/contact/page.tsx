@@ -1,6 +1,6 @@
 import ContactForm from "@/components/Contact";
 import Layout from "@/components/Common/Layout";
-// added spec
+// added spec files
 const ContactPage = () => {
   return (
     <>
